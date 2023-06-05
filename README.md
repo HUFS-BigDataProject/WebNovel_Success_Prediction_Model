@@ -32,4 +32,19 @@ GPU 문제를 극복하기 위해 [KoAlpaca-Polyglot-5.8B](https://huggingface.c
 ### 📌 Files
 `.py` Data Augmentation
 
+- Data
+    raw data - challenge league novel
+    raw data - best league novel
+    preprocessed data
 
+- Docs
+
+- EDA
+    data preprocessing
+    data web crawling
+    eda
+    
+- ML   
+    modeling - ###(모델 이름)
+
+- NLP
