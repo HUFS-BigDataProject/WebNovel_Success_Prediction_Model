@@ -11,13 +11,14 @@
 과적합을 방지하기 위해 5-fold 교차 검증을 진행하였고, 각 모델이 갖고 있는 하이퍼 파라미터의 일부를 Grid Search를 통해 최적화하여 가장 성능이 높았던 파라미터를 최종 모델의 파라미터로 선정하였다. 
 전체 데이터셋는 8:2의 비율로 훈련 데이터과 테스트 데이터로 분할하여 모델을 학습시켰고, 이때 종속 변수인 성공 여부의 비율을 고려하여 균등 분할하였다. 
 학습된 모델은 검증 데이터셋을 사용하여 정확도를 평가하였고, 최종 모델의 성능은 테스트 데이터셋을 사용하여 평가하였다.
-2. KoAlpaca-Polyglot-5.8B 모델을 활용하여 소설 창작에 대한 모델을 구축해보았다. 
-GPU 문제를 극복하기 위해 KoAlpaca-Polyglot-5.8B 모델을 활용하여 파인튜닝 작업을 실시해 KoAlpaca-Polyglot-12.8B 모델과 기능적으로 유사하게 동작하도록 하였다.
+2. [KoAlpaca-Polyglot-5.8B](https://huggingface.co/beomi/KoAlpaca-Polyglot-5.8B) 모델을 활용하여 소설 창작에 대한 모델을 구축해보았다. 
+GPU 문제를 극복하기 위해 [KoAlpaca-Polyglot-5.8B](https://huggingface.co/beomi/KoAlpaca-Polyglot-5.8B)모델을 활용하여 파인튜닝 작업을 실시해 [KoAlpaca-Polyglot-12.8B](https://huggingface.co/beomi/KoAlpaca-Polyglot-12.8B) 모델과 기능적으로 유사하게 동작하도록 하였다.
 구축한 소설 데이터 중 소설의 본문과 장르 정보를 선택헤 데이터를 구성하였으며, 토큰화, 정제 및 문장 분리 등의 과정을 거쳐 데이터의 품질을 향상시켰다. 
 학습에는 다양한 장르의 소설 데이터를 사용하였으며, 효과적인 파인튜닝을 위해 적절한 학습 전략을 적용하였다. 
 이때, GPU 부족 문제를 해결하기 위해 본문 글자 수를 10000자로 제한하였다. 
 파인튜닝을 위해 DataSet을 'instruction': df['novel'], 'output': df['genre'], DatasetDict을 'train': dataset 형태로 가공하였다. 
 이후 입력 시퀀스를 모델의 입력 크기인에 맞게 조정 후 학습을 진행하였다.
+###### *참고 : KoAlpaca: Korean Alpaca Model based on Stanford Alpaca (feat. LLAMA and Polyglot-ko) https://github.com/Beomi/KoAlpaca*
 ---
 ### ⏰ 개발 기간
 2023년 3월 22일 ~ 2023년 06월 05일  
@@ -30,6 +31,5 @@ GPU 문제를 극복하기 위해 KoAlpaca-Polyglot-5.8B 모델을 활용하여 
 ---
 ### 📌 Files
 `.py` Data Augmentation
-
 
 
