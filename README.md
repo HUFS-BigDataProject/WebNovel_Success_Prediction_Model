@@ -18,7 +18,7 @@ GPU 문제를 극복하기 위해 [KoAlpaca-Polyglot-5.8B](https://huggingface.c
 이때, GPU 부족 문제를 해결하기 위해 본문 글자 수를 10000자로 제한하였다. 
 파인튜닝을 위해 DataSet을 'instruction': df['novel'], 'output': df['genre'], DatasetDict을 'train': dataset 형태로 가공하였다. 
 이후 입력 시퀀스를 모델의 입력 크기인에 맞게 조정 후 학습을 진행하였다.
-3. GPT2를 활용하여 ChatGPT-replica 모델을 구현해보려고 했으나 결론적으로 실패했다. 전체 데이터셋을 8:2의 비율로 훈련 데이터와 테스트 데이터를 분할하여 장르별로 균등하게 모델을 학습시켰다. 소설 데이터 중 본문을 선택하여 이진 분류 후 ‘prompt’: 본문 ,’completion’: 0 또는 1인 JSON 데이터로 가공하였다. 입력 시퀀스가 제한되어 있어 본문 글자 수를 1024자로 제한 후 질문에 응답을 잘하도록 SFT를 수행하였다. 결론적으로 입력 시퀀스에 제한을 주었지만 계속해서 인덱싱 오류가 생겼다. 시간 관계 상으로 오류를 해결하지 못하고 GPT 모델 구현을 종료했다.
+3. GPT2를 활용하여 ChatGPT-replica 모델을 구현해보려고 했으나 결론적으로 실패했다. 전체 데이터셋을 8:2의 비율로 훈련 데이터와 테스트 데이터를 분할하여 장르별로 균등하게 모델을 학습시켰다. 소설 데이터 중 본문을 선택하여 이진 분류 후 ‘prompt’: 본문 ,’completion’: 0 또는 1인 JSON 데이터로 가공하였다. 입력 시퀀스가 제한되어 있어 본문 글자 수를 1024자로 제한 후 질문에 응답을 잘하도록 SFT를 수행시도하였다. 결론적으로 입력 시퀀스에 제한을 주었지만 계속해서 인덱싱 오류가 생겼다. 시간 관계 상으로 오류를 해결하지 못하고 GPT 모델 구현을 종료했다.
 ###### 참고 : KoAlpaca: Korean Alpaca Model based on Stanford Alpaca (feat. LLAMA and Polyglot-ko) https://github.com/Beomi/KoAlpaca
 ---
 ### ⏰ 개발 기간
