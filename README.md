@@ -31,20 +31,20 @@ GPU 문제를 극복하기 위해 [KoAlpaca-Polyglot-5.8B](https://huggingface.c
 ---
 ### 📌 Files
 - Data
-    `BN_final.xlsx` raw data best novel
-    `CN_final.xlsx` raw data challenge novel
-    `novel_final.csv` preprocessed data
-    `novel_genre.csv` novel&genre data for KoAlpaca
-    `네이버_소설_크롤링.ipynb` Crawling code
-    `데이터 전처리.ipynb` Data Preprocessing code
+  - `BN_final.xlsx` raw data best novel
+  - `CN_final.xlsx` raw data challenge novel
+  - `novel_final.csv` preprocessed data
+  - `novel_genre.csv` novel&genre data for KoAlpaca
+  - `네이버_소설_크롤링.ipynb` Crawling code
+  - `데이터 전처리.ipynb` Data Preprocessing code
 
 - EDA
-    `분석(별점,조회수,관심수,댓글수,리뷰수).docx` Analysis File
-    `분석(장르,글자수,업로드간격).ipynb` Analysis File
+    - `분석(별점,조회수,관심수,댓글수,리뷰수).docx` Analysis File
+    - `분석(장르,글자수,업로드간격).ipynb` Analysis File
     
 - ML   
-    `ML modeling.ipynb` modeling - RandomForest, SVM, Gradient Boosting, LGBM, XGBoost
+    - `ML modeling.ipynb` modeling - RandomForest, SVM, Gradient Boosting, LGBM, XGBoost
 
 - NLP
-    `ChatGPT.ipynb` modeling - ChatGPT
-    `Koalpaca.ipynb` modeling - KoAlpaca
+    - `ChatGPT.ipynb` modeling - ChatGPT
+    - `Koalpaca.ipynb` modeling - KoAlpaca
